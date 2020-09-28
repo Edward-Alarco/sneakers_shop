@@ -15,14 +15,15 @@ body{
 }
 header{
     .menu-barra-pc{
-        background-color: $primary;
+        background-color: #fff;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        min-height: 6rem;
+        min-height: 5rem;
+        color: #000;
         top: 0;
         left: 0;
         padding: 0 3rem;
@@ -34,14 +35,15 @@ header{
                 height: 100%;
                 width: 100%;
                 padding: 10px 15px;
-                box-shadow: 0 10px 10px -7.5px $shadow;
+                box-shadow: 5px 10px 10px -7.5px $shadow;
                 border-radius: 30px;
                 letter-spacing: 0;
                 border: none;
+                color: #000;
                 outline: none !important;
                 font-size: 1rem;
                 &::placeholder{
-                    color: rgba($color: $primary, $alpha: 0.5);
+                    color: rgba($color: #000, $alpha: 0.5);
                 }
             }
             i.fa-search{
@@ -50,17 +52,21 @@ header{
                 position: absolute;
                 right: 0;
                 padding-right: 1rem;
-                color: $primary;
+                color: #000;
             }
         }
         a{
             text-decoration: none;
-            color: #fff;
+            color: #000;
+            img{
+                height: 100%;
+                width: 100px;
+            }
         }
         .iconos{
             a{
                 text-decoration: none;
-                color: #fff;
+                color: #000;
                 font-size: 1.75rem;
                 margin-right: 1rem;
                 &:last-child{
@@ -72,7 +78,8 @@ header{
     .barra-sticky-pc{
         display: flex;
         flex-direction: row;
-        background-color: $primary;
+        background-color: #fff;
+        color: #000;
         padding: 20px 0;
         text-align: center;
         width: 100%;
@@ -82,113 +89,157 @@ header{
             a{
                 text-shadow: 0px 5px 5px -5px $shadow;
                 text-decoration: none;
-                color: #fff;
+                color: #000;
+                text-transform: uppercase;
                 margin: 1rem;
+                transition: all .3s ease-in;
+                font-weight: 500;
+                &:first-child{
+                    color: $primary;
+                    &:hover{
+                        color: #000;
+                    }
+                }
+                &:hover{
+                    color: $primary;
+                }
             }
         }
     }
 }
-.productos{
+.banner{
     margin-top: 0;
     margin-bottom: 2.5rem;
-    h2{
-        font-size: 2.5rem;
-        color: $primary;
-        font-weight: 900;
-        font-style: italic;
-        letter-spacing: 1px; 
-    }
-    figure{
-        position: relative;
-        width: 100%;
-        background-color: #fff;
-        text-align: left;
-        transition: all .3s ease-in-out;
-        img{
-            max-width: 100%;
-            vertical-align: top;
-            cursor: pointer;
+    .carousel-caption{
+        bottom: 50% !important;
+        transform: translateY(50%);
+        text-align: left !important;
+        padding-left: 1rem;
+        h5{
+            color: $primary;
+            font-weight: 900;
+            font-style: italic;
+            font-size: 2rem;
+            text-transform: uppercase;
         }
-        .icons{
+        p{
+            margin-bottom: 0 !important;
+            text-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 1);
+        }
+        &::after{
             position: absolute;
-            top: 0;
-            bottom: 0;
+            background: $primary;
+            content: '';
+            top: 50%;
+            transform: translateY(-50%);
             left: 0;
-            right: 0;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            a{
-                text-decoration: none;
-                margin: 2px;
-                opacity: 0;
-                transform: translateY(50%);
-                animation: all .3s ease-in-out;
-                i.fas{
-                    display: block;
-                    width: 40px;
-                    line-height: 40px;
-                    font-size: 1.4rem;
-                    background-color: #fff;
-                    text-align: center;
-                    color: #000;
-                    &:hover{
-                        background-color: #4da3e2;
-                        color: #ffffff;
-                        cursor: pointer;
-                    }
-                }
-                i.far{
-                    display: block;
-                    width: 40px;
-                    line-height: 40px;
-                    font-size: 1.4rem;
-                    background-color: #fff;
-                    text-align: center;
-                    color: #000;
-                    &:hover{
-                        background-color: #4da3e2;
-                        color: #ffffff;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
-        &:hover{
-            a{
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        figcaption{
-            padding: 10px;
-            h3{
-                font-size: 1.2rem;
-                font-weight: 600;
-                margin: 0 0 4px;
-            }
-            p.price{
-                font-weight: 700;
-                color: #4da3e2;
-                font-size: 1.05rem;
-                margin: 0.5rem 0;
-            }
+            width: 5px;
+            height: 70%;
         }
     }
 }
 
-a#btnizquierda{
-    left: -100px;
-    width: 5% !important;
-    background-color: rgba($color: #000000, $alpha: 0.2);
-    height: 90px;
-}
-a#btnderecha{
-    right: -86px;
-    width: 5% !important;
-    background-color: rgba($color: #000000, $alpha: 0.2);
-    height: 90px;
+.productos-shop{
+    h2{
+        font-size: 2.5rem;
+        color: $primary;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-style: italic;
+        letter-spacing: 1px;
+        &.mx-custom{
+            margin-top: 4rem;
+            margin-bottom: 3rem;
+        }
+    }
+    .contenedor-de-figures{
+        border: none;
+        border-radius: none;
+        display: flex;
+        flex-wrap: wrap;
+        figure{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 25%;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            background-color: #fff;
+            text-align: center;
+            color: #111;
+            &:hover{
+                .icons{
+                    a{
+                        opacity: 1;
+                        transform: translateX(0);
+                        &:nth-child(2){
+                            transition-delay: 0.1s;
+                        }
+                    }
+                }
+            }
+            &::after{
+                transition: all .4s ease-in-out;
+            }
+            &::before{
+                transition: all .4s ease-in-out;
+            }
+            img{
+                vertical-align: top;
+            }
+            figcaption{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-right: 10px;
+                h3{
+                    color: $primary;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    margin: 0 0 4px;
+                }
+                .price{
+                    text-transform: uppercase;
+                    margin: 4px 0;
+                    font-weight: 700;
+                    color: $primary;
+                    font-size: 1.2rem;
+                }
+            }
+            .icons{
+                position: absolute;
+                top: 0;
+                left: 20px;
+                padding: 10px;
+                animation: all .3s ease-in;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                a{
+                    text-decoration: none;
+                    opacity: 0;
+                    animation: all .3s ease-in;
+                    transform: translateY(50%);
+                    i{
+                        display: block;
+                        color: #000;
+                        background-color: #fff;
+                        width: 40px;
+                        line-height: 40px;
+                        font-size: 1.45rem;
+                        text-align: center;
+                        animation: all .3s ease;
+                        &:hover{
+                            background-color: $primary;
+                            color: #ffffff;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .redes{
@@ -320,6 +371,14 @@ a#btnderecha{
 }
 .contacto{
     padding: 4.5rem 0;
+    .titulocontacto{
+        font-size: 2.5rem;
+        color: $primary;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-style: italic;
+        letter-spacing: 1px;
+    }
 }
 #formularioContacto{
     .btn-custom{
@@ -369,30 +428,28 @@ footer{
 }
 
 
-@media all and (max-width: 1326px){
-    a#btnizquierda{
-        left: -65px;
+@media all and (max-width: 1200px){
+    .productos-shop .contenedor-de-figures figure{
+        width: 33.333333%;
     }
-    a#btnderecha{
-        right: -50px;
+    .productos-shop .contenedor-de-figures figure .icons{
+        left: 40px;
+    }
+    .productos-shop h2.mx-custom{
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    .productos-shop h2{
+        font-size: 1.75rem;
     }
 }
 
 @media all and (max-width: 1192px){
-    a#btnizquierda{
-        left: -51px;
-    }
-    .productos h2{
-        font-size: 2.25rem;
-    }
-    .productos figure figcaption h3{
-        font-size: 1.1rem;
-    }
-    .productos figure figcaption p.price{
-        font-size: 1.025rem;
-    }
     .redes h1{
-        font-size: 2.25rem;
+        font-size: 1.75rem;
+    }
+    .contacto .titulocontacto{
+        font-size: 1.75rem;
     }
 }
 
@@ -459,12 +516,6 @@ footer{
 }
 
 @media all and (max-width: 1030px){
-    a#btnizquierda{
-        left: -45px;
-    }
-    a#btnderecha{
-        right: -43px;
-    }
     .redes .contenedor .columna-instagram .contenedor-de-posts .post .texto-container{
         padding: 0.7rem;
     }
@@ -474,21 +525,30 @@ footer{
 }
 
 @media all and (max-width: 990px){
-    #productos figure{
-        display: block !important;
-        margin: 0 auto !important;
-        text-align: center !important;
-        .icons{
-            display: block;
-            margin: 0 auto;
-            width: 57%;
-        }
+    .productos-shop .contenedor-de-figures figure{
+        padding: 0.75rem;
+    }
+    .productos-shop .contenedor-de-figures figure .icons{
+        left: 20px;
+        top: 10px;
+    }
+    .banner .carousel-caption h5{
+        font-size: 1.5rem;
+    }
+    .banner .carousel-caption p{
+        font-size: 0.9rem;
     }
 }
 
 @media all and (max-width: 900px){
     .redes .contenedor .columna-instagram .contenedor-de-posts .post .texto-container{
         padding: 0.45rem;
+    }
+    .productos-shop .contenedor-de-figures figure figcaption h3{
+        font-size: 0.9rem;
+    }
+    .productos-shop .contenedor-de-figures figure figcaption .price{
+        font-size: 1.05rem;
     }
     .desccontacto{
         font-size: 0.9rem;
@@ -504,9 +564,6 @@ footer{
     }
     .redes .contenedor .columna-instagram .contenedor-de-posts .post .texto-container p{
         font-size: 0.85rem;
-    }
-    .productos{
-        margin-bottom: 1rem;
     }
     #fbpost{
         margin-bottom: 2rem !important;
@@ -556,20 +613,16 @@ footer{
 }
 
 @media all and (max-width: 767px){
-    #productos figure{
-        .icons{
-            display: block;
-            margin: 0 auto;
-            width: 40%;
-        }
+    .productos-shop .contenedor-de-figures figure{
+        padding: 0.2rem;
+    }    
+    .productos-shop .contenedor-de-figures figure .icons{
+        top: 0;
+        left: 0;
     }
 }
 
 @media all and (max-width: 650px){
-    .productos h2{
-        font-size: 1.75rem;
-        margin: 2rem 0;
-    }
     header .menu-barra-pc .busqueda{
         width: 300px;
         input{
@@ -611,17 +664,25 @@ footer{
         font-size: 0.8rem;
         color: $gris;
     }
-    a#btnizquierda{
-        left: 0;
-    }
-    a#btnderecha{
-        right: 0;
+    label{
+        font-size: 0.8rem;
+        margin-bottom: 0.25rem;
+        color: #696969;
     }
 }
 
 @media all and (max-width: 500px){
     .redes .contenedor .columna-instagram .contenedor-de-posts{
         padding: 0;
+    }
+    .contacto .titulocontacto{
+        font-size: 1.75rem;
+    }
+    .contacto{
+        padding: 1rem 0;
+    }
+    .contacto .titulocontacto{
+        font-size: 1.25rem;
     }
     .menu-barra-pc h2{
         font-size: 1.5rem;
@@ -633,6 +694,14 @@ footer{
             display: block;
             margin: 0 auto;
         }
+    }
+    .productos-shop h2.mx-custom{
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .redes h1{
+        font-size: 1.2rem;
     }
     header .menu-barra-pc .busqueda i.fa-search{
         right: 0;
@@ -656,6 +725,12 @@ footer{
     }
 }
 
+@media all and (max-width: 450px){
+    .productos-shop .contenedor-de-figures figure{
+        width: 50%;
+    }
+}
+
 @media all and (max-width: 400px){
     .redes .contenedor .columna-instagram .contenedor-de-posts .post:first-child{
         width: 100%;
@@ -671,16 +746,9 @@ footer{
     }
     .redes .contenedor .columna-instagram .contenedor-de-posts .post .img-container .to-instagram a i.fab{
         font-size: 2rem;
-    }   
-    .productos h2{
-        font-size: 1.25rem;
-        margin: 1rem 0;
     }
     .redes h1{
         font-size: 1.25rem;
-    }
-    #productos figure{
-        width: 90%;
     }
 }
 
@@ -702,5 +770,19 @@ footer{
     }
     .redes .contenedor .columna-instagram .contenedor-de-posts .post:last-child{
         padding: 0.5rem;
+    }
+}
+
+@media all and (max-width: 300px){
+    .productos-shop .contenedor-de-figures figure{
+        width: 100%;
+        padding: 0.05rem;
+    }
+    .productos-shop .contenedor-de-figures figure .icons{
+        left: 10px;
+        top: 0;
+    }
+    .redes .redes-sociales a{
+        margin: 0.5rem;
     }
 }
