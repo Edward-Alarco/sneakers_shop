@@ -474,8 +474,15 @@ footer{
 }
 
 @media all and (max-width: 990px){
-    a#btnderecha{
-        right: 45px;
+    #productos figure{
+        display: block !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        .icons{
+            display: block;
+            margin: 0 auto;
+            width: 57%;
+        }
     }
 }
 
@@ -485,6 +492,12 @@ footer{
     }
     .desccontacto{
         font-size: 0.9rem;
+    }
+    h2.titulocontacto{
+        font-size: 1.7rem;
+    }
+    .contacto{
+        padding: 2.5rem 0;
     }
     .redes .contenedor .columna-instagram .contenedor-de-posts .post .texto-container h2{
         font-size: 1.05rem;
@@ -498,20 +511,16 @@ footer{
     #fbpost{
         margin-bottom: 2rem !important;
         span{
-            width: 500px !important;
-            height: 350px !important;
+            width: 360px !important;
+            height: 320px !important;
+            iframe{
+                width: 100% !important;
+            }
         }
     }
 }
 
 @media all and (max-width: 850px){
-    #fbpost{
-        margin-bottom: 1.5rem !important;
-        span{
-            width: 450px !important;
-            height: 350px !important;
-        }
-    }
     .redes .contenedor .columna-instagram .contenedor-de-posts{
         flex-direction: column;
     }
@@ -520,5 +529,178 @@ footer{
     }
     .redes .contenedor .columna-instagram .contenedor-de-posts .post:first-child{
         margin: 0 auto 1.25rem auto;
+    }.redes .redes-sociales a{
+        margin: 1.5rem;
+    }
+    a#btnizquierda{
+        left: -40px;
+    }
+    a#btnderecha{
+        right: -40px;
+    }
+    header .menu-barra-pc{
+        flex-direction: column;
+        a,.busqueda,.iconos{
+            margin: 0.3rem 0;
+        }
+    }
+}
+
+@media all and (max-width: 799px){
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post .texto-container{
+        padding: 0.3rem;
+    }
+    .redes .contenedor .columna-instagram .contenedor-de-posts{
+        margin: 1rem 0;
+    }
+}
+
+@media all and (max-width: 767px){
+    #productos figure{
+        .icons{
+            display: block;
+            margin: 0 auto;
+            width: 40%;
+        }
+    }
+}
+
+@media all and (max-width: 650px){
+    .productos h2{
+        font-size: 1.75rem;
+        margin: 2rem 0;
+    }
+    header .menu-barra-pc .busqueda{
+        width: 300px;
+        input{
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    header .menu-barra-pc .busqueda i.fa-search{
+        right: 0;
+    }
+    .redes h1{
+        font-size: 1.75rem;
+    }
+    .redes .redes-sociales a{
+        margin: 1.1rem;
+        font-size: 0.9rem;
+    }
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post:first-child{
+        flex-direction: column;
+    }
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post:last-child{
+        flex-direction: column;
+    }
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post .img-container{
+        width: 100%;
+    }
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post .texto-container{
+        width: 100%;
+    }
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post .texto-container h2{
+        font-size: 1rem;
+    }
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post .texto-container p{
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+    .desccontacto{
+        font-size: 0.8rem;
+        color: $gris;
+    }
+    a#btnizquierda{
+        left: 0;
+    }
+    a#btnderecha{
+        right: 0;
+    }
+}
+
+@media all and (max-width: 500px){
+    .redes .contenedor .columna-instagram .contenedor-de-posts{
+        padding: 0;
+    }
+    .menu-barra-pc h2{
+        font-size: 1.5rem;
+    }
+    header .menu-barra-pc .busqueda{
+        width: 250px;
+        input{
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    header .menu-barra-pc .busqueda i.fa-search{
+        right: 0;
+    }
+    header .barra-sticky-pc .menu-principal a{
+        margin: 0.25rem;
+        font-size: 0.9rem;
+    }
+    header .menu-barra-pc .iconos a{
+        font-size: 1.3rem;
+    }
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post:first-child{
+        width: 70%;
+        display: block;
+        margin: 0.25rem auto 1.25rem auto;
+    }
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post:last-child{
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media all and (max-width: 400px){
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post:first-child{
+        width: 100%;
+        display: block;
+        margin: 0.25rem auto 1.25rem auto;
+        padding: 1rem;
+    }
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post:last-child{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post .img-container .to-instagram a i.fab{
+        font-size: 2rem;
+    }   
+    .productos h2{
+        font-size: 1.25rem;
+        margin: 1rem 0;
+    }
+    .redes h1{
+        font-size: 1.25rem;
+    }
+    #productos figure{
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 350px){
+    header .menu-barra-pc .busqueda{
+        width: 200px;
+        input{
+            font-size: 0.8rem;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    header .menu-barra-pc .busqueda i.fa-search{
+        right: 0;
+    }
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post:first-child{
+        padding: 0.5rem;
+    }
+    .redes .contenedor .columna-instagram .contenedor-de-posts .post:last-child{
+        padding: 0.5rem;
     }
 }
