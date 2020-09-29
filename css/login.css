@@ -63,11 +63,11 @@ body{font-family: 'Poppins', sans-serif; background-color: #00A3FF;}
 form{
   /* background-color: rgba(52, 152, 219,1.0); */
   background-color: transparent;
-  padding: 3rem 2rem;
+  padding: 0 2rem 3rem 2rem;
     width: 460px;
 }
 .avatar{
-    width: 100px;
+    width: 200px;
     transform: scale(1,1); 
     transition: 0.4s;
 }
@@ -189,17 +189,38 @@ footer{
     }
 }
 @media (max-width: 900px){
+    .avatar{
+        width: 150px;
+    }
     .img{
         display: none;
     }
     .container{
         grid-template-columns: 1fr;
     }
-    .wave{
-        display: none;
+    header .menu-principal{
+        padding: 0 0.75rem;
     }
     .login-container{
         justify-content: center;
         align-items: center;
+    }
+    footer h2{
+        font-size: 1.1rem;
+    }
+    footer p{
+        font-size: 0.9rem;
+    }
+    .input-div > div h5{
+        font-size: 0.9rem;
+    }
+    form h2{
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 500px){
+    .avatar{
+        width: 100px;
     }
 }
